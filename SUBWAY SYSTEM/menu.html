@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JIA Subs</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="menu.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- LEFT -->
+
+  <div class="menu-area">
+    <h1>JIA SUBS</h1>
+
+
+    <div class="categories">
+      <button class="active">All</button>
+      <button>Sandwiches</button>
+      <button>Beverages</button>
+      <button>Others</button>
+    </div>
+    
+
+    <div class="menu-grid">
+
+      <div class="menu-card"
+     data-name="Beef Sandwich"
+     data-price="7.90"
+     data-addons="Lettuce:0.5,Tomato:0.5,Onion:0.5,Cocumber:0.5,Pickles:0.5,Banana Pepper:0.5,
+     Olives:0.5,Jalapeno:0.5, No Add-ons:0.0"
+     data-category="Sandwiches">
+
+  <img src="Images/beef sand.jpg" onclick="openAddonPanel(this)">
+  <h3>Beef Sandwich</h3>
+  <p>$7.90</p>
+</div>
+
+ <div class="menu-card"
+     data-name="Turkey Sandwich"
+     data-price="7.90"
+     data-addons="Lettuce:0.5,Tomato:0.5,Onion:0.5,Cocumber:0.5,Pickles:0.5,Banana Pepper:0.5,
+     Olives:0.5,Jalapeno:0.5, No Add-ons:0.0"
+     data-category="Sandwiches">
+
+  <img src="Images/turkey sand.jpg" onclick="openAddonPanel(this)">
+  <h3>Turkey Sandwich</h3>
+  <p>$7.90</p>
+</div>
+
+<div class="menu-card"
+     data-name="Ham Sandwich White Toast"
+     data-price="7.90"
+     data-addons="Lettuce:0.5,Tomato:0.5,Onion:0.5,Cocumber:0.5,Pickles:0.5,Banana Pepper:0.5,
+     Olives:0.5,Jalapeno:0.5, No Add-ons:0.0"
+     data-category="Sandwiches">
+
+  <img src="Images/ham sandwich white toast.jpg" onclick="openAddonPanel(this)">
+  <h3>Ham Sandwich White Toast</h3>
+  <p>$7.90</p>
+</div>
+
+<div class="menu-card"
+     data-name="Ham Sandwich Brown Toast"
+     data-price="7.90"
+     data-addons="Lettuce:0.5,Tomato:0.5,Onion:0.5,Cocumber:0.5,Pickles:0.5,Banana Pepper:0.5,
+     Olives:0.5,Jalapeno:0.5, No Add-ons:0.0"
+     data-category="Sandwiches">
+
+  <img src="Images/ham sandwich brown.jpg" onclick="openAddonPanel(this)">
+  <h3>Ham Sandwich Brown Toast</h3>
+  <p>$7.90</p>
+</div>
+
+<div class="menu-card"
+     data-name="Pizza Sub"
+     data-price="7.90"
+     data-addons="Lettuce:0.5,Tomato:0.5,Onion:0.5,Cocumber:0.5,Pickles:0.5,Banana Pepper:0.5,
+     Olives:0.5,Jalapeno:0.5, No Add-ons:0.0"
+     data-category="Sandwiches">
+
+  <img src="Images/pizza sub.jpg" onclick="openAddonPanel(this)">
+  <h3>Pizza Sub</h3>
+  <p>$7.90</p>
+</div>
+
+<div class="menu-card"
+     data-name="Ham Sub"
+     data-price="8.90"
+     data-addons="Lettuce:0.5,Tomato:0.5,Onion:0.5,Cocumber:0.5,Pickles:0.5,Banana Pepper:0.5,
+     Olives:0.5,Jalapeno:0.5, No Add-ons:0.0"
+     data-category="Sandwiches">
+
+  <img src="Images/Ham sub.jpg" onclick="openAddonPanel(this)">
+  <h3>Ham Sub</h3>
+  <p>$8.90</p>
+</div>
+
+
+<div class="menu-card"
+     data-name="Beef Sub"
+     data-price="8.90"
+     data-addons="Lettuce:0.5,Tomato:0.5,Onion:0.5,Cocumber:0.5,Pickles:0.5,Banana Pepper:0.5,
+     Olives:0.5,Jalapeno:0.5, No Add-ons:0.0"
+     data-category="Sandwiches">
+
+  <img src="Images/Beef sub.jpg" onclick="openAddonPanel(this)">
+  <h3>Beef Sub</h3>
+  <p>$8.90</p>
+</div>
+
+<div class="menu-card"
+     data-name="Turkey Sub"
+     data-price="8.90"
+     data-addons="Lettuce:0.5,Tomato:0.5,Onion:0.5,Cocumber:0.5,Pickles:0.5,Banana Pepper:0.5,
+     Olives:0.5,Jalapeno:0.5, No Add-ons:0.0"
+     data-category="Sandwiches">
+
+  <img src="Images/turkey sub.jpg" onclick="openAddonPanel(this)">
+  <h3>Turkey Sub</h3>
+  <p>$8.90</p>
+</div>
+
+<div class="menu-card"
+     data-name="Chicken Sub"
+     data-price="8.90"
+     data-addons="Lettuce:0.5,Tomato:0.5,Onion:0.5,Cocumber:0.5,Pickles:0.5,Banana Pepper:0.5,
+     Olives:0.5,Jalapeno:0.5, No Add-ons:0.0"
+     data-category="Sandwiches">
+
+  <img src="Images/chicken sub.jpg" onclick="openAddonPanel(this)">
+  <h3>Chicken Sub</h3>
+  <p>$8.90</p>
+</div>
+
+<div class="menu-card"
+     data-name="Pastrami Sub"
+     data-price="8.90"
+     data-addons="Lettuce:0.5,Tomato:0.5,Onion:0.5,Cocumber:0.5,Pickles:0.5,Banana Pepper:0.5,
+     Olives:0.5,Jalapeno:0.5, No Add-ons:0.0"
+     data-category="Sandwiches">
+
+  <img src="Images/pastrami sub.jpg" onclick="openAddonPanel(this)">
+  <h3>Pastrami Sub</h3>
+  <p>$8.90</p>
+</div>
+
+<div class="menu-card"
+     data-name="Cornbeef Sub"
+     data-price="8.90"
+     data-addons="Lettuce:0.5,Tomato:0.5,Onion:0.5,Cocumber:0.5,Pickles:0.5,Banana Pepper:0.5,
+     Olives:0.5,Jalapeno:0.5, No Add-ons:0.0"
+     data-category="Sandwiches">
+
+  <img src="Images/cornbeef sub.jpg" onclick="openAddonPanel(this)">
+  <h3>Cornbeef Sub</h3>
+  <p>$8.90</p>
+</div>
+
+<div class="menu-card"
+     data-name="Coldcut Sub"
+     data-price="9.90"
+     data-addons="Lettuce:0.5,Tomato:0.5,Onion:0.5,Cocumber:0.5,Pickles:0.5,Banana Pepper:0.5,
+     Olives:0.5,Jalapeno:0.5, No Add-ons:0.0"
+     data-category="Sandwiches">
+
+  <img src="Images/colcut sub.jpg" onclick="openAddonPanel(this)">
+  <h3>Cold Cut Sub</h3>
+  <p>$9.90</p>
+</div>
+
+<div class="menu-card"
+     data-name="Trio Sub"
+     data-price="9.90"
+     data-addons="Lettuce:0.5,Tomato:0.5,Onion:0.5,Cocumber:0.5,Pickles:0.5,Banana Pepper:0.5,
+     Olives:0.5,Jalapeno:0.5, No Add-ons:0.0"
+     data-category="Sandwiches">
+
+  <img src="Images/trio sub.jpg" onclick="openAddonPanel(this)">
+  <h3>Trio Sub</h3>
+  <p>$9.90</p>
+</div>
+
+<div class="menu-card"
+     data-name="All Meat Sub"
+     data-price="11.90"
+     data-addons="Lettuce:0.5,Tomato:0.5,Onion:0.5,Cocumber:0.5,Pickles:0.5,Banana Pepper:0.5,
+     Olives:0.5,Jalapeno:0.5, No Add-ons:0.0"
+     data-category="Sandwiches">
+
+  <img src="Images/all meat sub.jpg" onclick="openAddonPanel(this)">
+  <h3>All Meat Sub</h3>
+  <p>$11.90</p>
+</div>
+  
+
+  <!-- RIGHT CART -->
+  <div class="cart">
+    <h2>My Cart</h2>
+    <div id="cartItems"></div>
+
+    <div class="cart-total">
+      Total: $<span id="cartTotal">0.00</span>
+    </div>
+
+  <button class="checkout-btn" onclick="goToCheckout()">Checkout</button>
+
+  </div>
+
+</div>
+
+<!-- ADD-ON PANEL -->
+<div id="addonPanel">
+  <button id="closeAddonPanel">×</button> <!-- Exit button -->
+  <h3 id="addonTitle"></h3>
+  <div id="addonOptions"></div>
+
+  <div class="addon-footer">
+    <span>Total: $<span id="addonTotal"></span></span>
+    <button onclick="addToCart()">Add to Cart</button>
+  </div>
+</div>
+
+<div id="cartItems"></div>
+
+
+<!-- ACCOUNT -->
+
+
+<div class="user-trigger" onclick="toggleUserPanel()">
+    <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="User Profile" class="user-avatar">
+</div>
+
+<div id="userPanel" class="side-panel">
+    <div class="panel-header">
+        <div class="user-info">
+            <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="User" class="avatar-small">
+            <span id="panelUserName">Guest</span>
+        </div>
+        <span class="material-symbols-rounded close-icon" onclick="toggleUserPanel()">close</span>
+    </div>
+    
+    <div class="panel-links">
+        <div class="nav-item">
+            <span class="material-symbols-rounded">Account Settings</span>
+        </div>
+        
+        <div class="nav-item">
+            <span class="material-symbols-rounded">Order History</span>
+        </div>
+    </div>
+
+    <div class="panel-footer">
+        <button class="logout-btn" onclick="logout()">
+            <span class="material-symbols-rounded">Logout</span>
+        </button>
+    </div>
+</div>
+
+<div id="panelOverlay" class="panel-overlay" onclick="toggleUserPanel()"></div>
+
+
+
+<script src="menu.js"></script>
+</body>
+</html>

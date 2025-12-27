@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Checkout | JIA Subs</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="payment.css">
+</head>
+
+<body>
+
+<div class="checkout-container">
+
+    <!-- LEFT: ORDER SUMMARY -->
+    <div class="order-summary">
+        <h2>Order Summary</h2>
+        <div id="summaryItems"></div>
+
+        <div class="summary-total">
+            Total: $<span id="summaryTotal">0.00</span>
+        </div>
+    </div>
+
+    <!-- RIGHT: PAYMENT -->
+    <div class="payment-panel">
+        <h2>JIA SUB Payment Section</h2>
+
+        <div class="payment-method">
+    <button id="codBtn" class="pay-tab active" onclick="showCOD()">Cash on Delivery</button>
+    <button id="cardBtn" class="pay-tab" onclick="showCard()">Credit / Debit Card</button>
+</div>
+
+        <!-- COD -->
+        <form id="cod-form">
+            <input type="email" placeholder="Email Address" required>
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+            <input type="tel" placeholder="Contact Number" required>
+            <input type="text" placeholder="Delivery Address" required>
+            <textarea placeholder="Note (Optional)"></textarea>
+        </form>
+
+        <!-- CARD -->
+        <form id="card-form" class="hidden">
+            <input type="email" placeholder="Email Address" required>
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+            <input type="tel" placeholder="Contact Number" required>
+            <input type="text" placeholder="Delivery Address" required>
+
+            <input type="text" placeholder="Mastercard Number" maxlength="16" required>
+            <div class="card-row">
+                <input type="month" required>
+                <input type="text" placeholder="CVV" maxlength="3" required>
+            </div>
+        </form>
+        
+<!-- Tip Section -->
+<div class="tip-section">
+    <label>Tip (Optional):</label>
+    <div class="tip-options">
+        <button type="button" class="tip-btn" data-value="2">$2</button>
+        <button type="button" class="tip-btn" data-value="3">$3</button>
+        <button type="button" class="tip-btn" data-value="5">$5</button>
+        <button type="button" class="tip-btn" data-value="custom">Custom</button>
+        <button type="button" class="tip-btn" data-value="0">No Tip</button>
+    </div>
+    <input type="number" id="customTip" placeholder="Enter amount" class="hidden" min="0">
+</div>
+
+<!-- CONFIRM BUTTON -->
+<button type="button" class="confirm-btn" onclick="submitOrder()">
+    Confirm Payment
+</button>
+
+
+
+<!-- SUCCESS MODAL -->
+<div class="modal" id="successModal">
+    <div class="modal-content">
+        <h3>Order Submitted</h3>
+        <p>Thank you for ordering! We sent you a verification email.</p>
+        <button onclick="closeModal()">OK</button>
+    </div>
+</div>
+
+<form id="card-form" class="hidden">
+    <input type="email" placeholder="Email Address" required>
+    <input type="text" placeholder="First Name" required>
+    <input type="text" placeholder="Last Name" required>
+    <input type="tel" placeholder="Contact Number" required>
+    <input type="text" placeholder="Delivery Address" required>
+
+    <input type="text" placeholder="Mastercard Number" maxlength="16" required>
+
+    <div class="card-row">
+        <input type="month" required>
+        <input type="text" placeholder="CVV" maxlength="3" required>
+    </div>
+
+    <!-- NEW OPTIONAL NOTE -->
+    <textarea placeholder="Note (Optional)"></textarea>
+</form>
+
+
+<script src="payment.js"></script>
+</body>
+</html>
