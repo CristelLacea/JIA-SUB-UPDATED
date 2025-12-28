@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JIA SUBS Admin Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="admin.css">
+
+</head>
+<body>
+
+<div class="admin-container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2>JIA SUBS</h2>
+
+        <button onclick="showSection('dashboard')">Dashboard</button>
+        <button onclick="showSection('orders')">Orders</button>
+        <button onclick="showSection('history')">Order History</button>
+        <button onclick="showSection('menu')">Menu Management</button>
+        <button type="button" onclick="openPreview()">Preview Customer Menu</button>
+        <button class="logout" onclick="logout()">Logout</button>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="content">
+
+        <!-- DASHBOARD -->
+        <section id="dashboard" class="section active">
+            <h1>Sales Overview</h1>
+
+            <div class="date-filter">
+                <label>Select Date:</label>
+                <input type="date" id="salesDate" onchange="updateStats()">
+                <button onclick="clearDate()">Clear</button>
+            </div>
+
+            <div class="stats">
+                <div class="card">
+                    Sales
+                    <strong>$<span id="salesToday">0.00</span></strong>
+                </div>
+
+                <div class="card">
+                    Orders
+                    <strong><span id="totalOrders">0</span></strong>
+                </div>
+
+                <div class="card">
+                    Completed
+                    <strong><span id="completedOrders">0</span></strong>
+                </div>
+            </div>
+        </section>
+
+        <!-- CURRENT ORDERS -->
+        <section id="orders" class="section">
+            <h1>Current Orders</h1>
+            <div id="ordersList"></div>
+        </section>
+
+        <!-- ORDER HISTORY -->
+        <section id="history" class="section">
+            <h1>Order History</h1>
+            <div id="historyList"></div>
+        </section>
+
+        <!-- MENU MANAGEMENT -->
+        <section id="menu" class="section">
+            <h1>Menu Management</h1>
+
+            <div class="menu-form">
+                <input id="itemName" type="text" placeholder="Product Name">
+                <input id="itemPrice" type="number" placeholder="Price">
+                <input id="itemImage" type="file" accept="image/*">
+                <button onclick="addItem()">Add Item</button>
+            </div>
+
+            <div id="menuList" class="menu-grid"></div>
+        </section>
+
+    </main>
+</div>
+
+<!-- ORDER DETAILS MODAL -->
+<div class="modal" id="orderModal">
+    <div class="modal-content">
+        <h3>Order Details</h3>
+        <div id="orderDetails"></div>
+        <button onclick="closeModal()">Close</button>
+    </div>
+</div>
+
+<!-- CUSTOMER PREVIEW MODAL -->
+<div class="modal" id="previewModal">
+    <div class="modal-content preview-content">
+        <div class="preview-header">
+            <div>
+                <strong>Customer View (Live Preview)</strong>
+                <span style="font-size:12px;opacity:.8;">menu.html</span>
+            </div>
+            <div class="preview-actions">
+                <button onclick="refreshPreview()">⟳ Refresh</button>
+                <button onclick="closePreview()">← Back to Dashboard</button>
+            </div>
+        </div>
+        <iframe src="menu.html"></iframe>
+    </div>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>
